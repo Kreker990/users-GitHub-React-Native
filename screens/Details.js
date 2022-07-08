@@ -1,7 +1,9 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 
 const Details = ({ route }) => {
+    const navigation = useNavigation()
     const user = route.params
     console.log(user);
     return (
@@ -21,6 +23,7 @@ const Details = ({ route }) => {
                     <Text style={styles.data}>website: {user.user.website}</Text>
                 </View>
             </View>
+            
         </ScrollView>
     )
 }
